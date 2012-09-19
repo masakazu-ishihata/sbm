@@ -1,8 +1,8 @@
 # Stochastic Block Model (SBM)
 
 Bayesian SBM の Collapsed Gibbs Sampling を試しに実装してみる。   
-A を M^1 * M^2 行列とし、A_{ij} はカテゴリ(etc 0/1, non/good/bad)  
-SBM では A の確率を以下の様に定義する。   
+A を M^1 * M^2 行列とし、A_ij ２つのインスタンス i,j の関係(etc 0/1, non/good/bad) を表す。   
+SBM は A の生成過程を以下の様に仮定する。   
 
     \pi^n ~ Dir(\alpha)    (n = 1,2)
     c^n ~ Cat(\pi^n)       (n = 1,2)
@@ -38,7 +38,7 @@ SBM では A の確率を以下の様に定義する。
 sbm.rb はファイルにクラスタリングの結果と \eta の推定値が出力します。  
 例えば以下を実行したとします。
 
-   ./sbm.rb -i test.dat -o test.out -n 100 -N 2
+    ./sbm.rb -i test.dat -o test.out -n 100 -N 2
 
 そのとき test.out の内容が以下であったとします。
 
