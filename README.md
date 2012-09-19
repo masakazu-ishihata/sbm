@@ -1,6 +1,8 @@
 # Stochastic Block Model (SBM)
 
-Bayesian SBM の Collapsed Gibbs Sampling を試しに実装してみる。   
+(Bayesian) SBM の Collapsed Gibbs Sampling を試しに実装してみた。
+
+### Bayesian SBM
 A を M^1 * M^2 行列とし、A_ij ２つのインスタンス i,j の関係(etc 0/1, non/good/bad) を表す。   
 SBM は A の生成過程を以下の様に仮定する。   
 
@@ -18,7 +20,7 @@ SBM は A の生成過程を以下の様に仮定する。
       \prod_{n=1,2} p(c^n | \pi^n)p(\pi^n | \alpha)
       \prod_{k,l} p(\eta_{kl} | \beta)
 
-## 入力ファイル
+### 入力ファイル
 
 入力は関係データです。  
 フォーマットは以下です。
