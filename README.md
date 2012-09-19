@@ -76,8 +76,9 @@ sbm.rb はファイルにクラスタリングの結果と \eta の推定値が�
 この時のクラスタリング前後の行列を見比べてみましょう。    
 自動的にグラフを出力するスクリプトも書いたのですが、ダサいのでここには載せません。    
 
-![before](/masakazu-ishihata/sbm/blob/master/test/test.png)    
-![after](/masakazu-ishihata/sbm/blob/master/test/test.res.png)   
+![before](/masakazu-ishihata/sbm/master/test/test.png)
+![after](/masakazu-ishihata/sbm/master/test/test.res.png)
+
 
 グラフを見た感じクラスタリングで来てそうですね！
 
