@@ -4,10 +4,10 @@
 # default
 ################################################################################
 @@debug = false
-@ifile = "ranks.dat"
-@ofile = "ranks.out"
-@a = 0.1
-@b = 0.1
+@ifile = "test.dat"
+@ofile = "test.out"
+@a = 1
+@b = 1
 @n = 100
 @N = 3
 @seed = rand(1000)
@@ -75,7 +75,7 @@ class Array
   #### sample ####
   def sample
     z = self.sum
-    r = rand * z
+    r = rand * z.to_f
     s = 0
     for i in 0..self.size-1
       s += self[i]
@@ -91,8 +91,8 @@ end
 class MySBM
   #### new ####
   def initialize(_file, _n)
-    @a = 0.1           # \alpha
-    @b = 0.1           # \beta
+    @a = 1             # \alpha
+    @b = 1             # \beta
     @seed = rand(100)  # random seed
 
     srand(@seed)
@@ -432,7 +432,8 @@ class MySBM
   #### esitimate eta ####
   def cal_eta(ckey)
     d = Array.new(@v){|v| @Ce[ckey][v] + @b}
-    d.map{|q| q / d.sum }
+    s = d.sum
+    d.map{|q| q / s.to_f }
   end
 
   ################################################################################
